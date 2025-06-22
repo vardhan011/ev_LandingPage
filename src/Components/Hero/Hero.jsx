@@ -1,5 +1,8 @@
 import React from 'react'
 import './Hero.css'
+import arrowBtn from '../../assets/arrow_btn.png'
+import playIcon from '../../assets/play_icon.png'
+import pauseIcon from '../../assets/pause_icon.png'
 
 const Hero = ({ heroData, setHeroCount, heroCount, setPlayStatus, playStatus }) => {
     return (
@@ -11,7 +14,7 @@ const Hero = ({ heroData, setHeroCount, heroCount, setPlayStatus, playStatus }) 
 
             <div className='hero-explore'>
                 <p>Explore the features</p>
-                <img src="/arrow_btn.png" alt="arrow" />
+                <img src={arrowBtn} alt="arrow" />
             </div>
 
             <div className='hero-dots-wrapper'>
@@ -25,7 +28,7 @@ const Hero = ({ heroData, setHeroCount, heroCount, setPlayStatus, playStatus }) 
             <div className='hero-play'>
                 <img
                     onClick={() => setPlayStatus(!playStatus)}
-                    src={playStatus ? '/pause_icon.png' : '/play_icon.png'}
+                    src={playStatus ? pauseIcon : playIcon}
                     alt={playStatus ? "Pause" : "Play"}
                 />
             </div>
